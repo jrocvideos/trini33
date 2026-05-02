@@ -1,0 +1,13 @@
+1:"$Sreact.fragment"
+2:I[53615,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"Navigation"]
+3:I[62863,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"FloralWatermark"]
+4:I[92573,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"HeroSection"]
+5:I[22440,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"FeaturesSection"]
+6:I[9213,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"HowItWorks"]
+7:I[86717,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"CommunitySection"]
+8:I[49575,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"MembershipSection"]
+9:I[91290,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js","/_next/static/chunks/0rxzbxctm16lw.js"],"Footer"]
+a:I[43383,["/_next/static/chunks/0t5c2r9fncc9~.js","/_next/static/chunks/01qyhlvpy8u~b.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-trini-ivory","children":[["$","$L2",null,{}],["$","div",null,{"className":"relative","children":[["$","$L3",null,{}],["$","$L4",null,{}]]}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/0rxzbxctm16lw.js","async":true}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OP0DdCA3i3C5DIVAqbiwL"}
+c:null
