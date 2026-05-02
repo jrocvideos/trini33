@@ -1,26 +1,47 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-cormorant: 'Cormorant Garamond', serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-great-vibes: 'Great Vibes', cursive;
+  }
+  body {
+    @apply bg-trini-ivory text-trini-charcoal font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .floral-divider {
+    @apply relative h-px w-full bg-gradient-to-r from-transparent via-trini-orchid/40 to-transparent;
+  }
+  .floral-divider::before,
+  .floral-divider::after {
+    content: '';
+    @apply absolute top-1/2 h-2 w-2 -translate-y-1/2 rotate-45 bg-trini-orchid/60;
+  }
+  .floral-divider::before { @apply left-1/4; }
+  .floral-divider::after { @apply right-1/4; }
+  .btn-primary {
+    @apply bg-trini-forest text-trini-ivory px-8 py-4 rounded-full font-display text-lg 
+           transition-all duration-300 hover:bg-trini-forest/90 hover:shadow-lg 
+           hover:shadow-trini-forest/20 active:scale-95;
+  }
+  .btn-gold {
+    @apply bg-trini-gold text-trini-charcoal px-8 py-4 rounded-full font-display text-lg 
+           transition-all duration-300 hover:bg-trini-gold/90 hover:shadow-lg 
+           hover:shadow-trini-gold/20 active:scale-95;
+  }
+  .card-premium {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl border border-trini-sage/30 
+           shadow-sm hover:shadow-xl hover:shadow-trini-forest/5 transition-all duration-500;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-trini-forest via-trini-violet to-trini-orchid bg-clip-text text-transparent;
+  }
 }
