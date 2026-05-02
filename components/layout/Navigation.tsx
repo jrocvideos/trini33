@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { LogoConcept3 } from "@/components/floral/LogoConcepts";
-import { Menu, X, ShoppingBag, Heart } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 
 const navLinks = [
   { href: "/shop", label: "Shop" },
@@ -36,9 +36,6 @@ export const Navigation = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <button className="p-2 text-trini-charcoal/70 hover:text-trini-violet transition-colors">
-              <Heart className="w-5 h-5" />
-            </button>
             <button className="p-2 text-trini-charcoal/70 hover:text-trini-violet transition-colors relative">
               <ShoppingBag className="w-5 h-5" />
               <span className="absolute -top-1 -right-1 w-4 h-4 bg-trini-orchid text-white text-[10px] rounded-full flex items-center justify-center">0</span>

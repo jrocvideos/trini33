@@ -1,47 +1,107 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-trini-forest: #1E4D3A;
+  --color-trini-ivory: #F7F3EA;
+  --color-trini-violet: #6E4A8E;
+  --color-trini-orchid: #D6A4C9;
+  --color-trini-gold: #C9A227;
+  --color-trini-sage: #B8C4B1;
+  --color-trini-charcoal: #2A2A2A;
+  --color-trini-cream: #FDFBF7;
+  --font-display: var(--font-cormorant), serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-script: var(--font-great-vibes), cursive;
+}
 
 @layer base {
-  :root {
-    --font-cormorant: 'Cormorant Garamond', serif;
-    --font-inter: 'Inter', sans-serif;
-    --font-great-vibes: 'Great Vibes', cursive;
-  }
   body {
-    @apply bg-trini-ivory text-trini-charcoal font-body antialiased;
+    background-color: var(--color-trini-ivory);
+    color: var(--color-trini-charcoal);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    font-family: var(--font-display);
   }
 }
 
 @layer components {
   .floral-divider {
-    @apply relative h-px w-full bg-gradient-to-r from-transparent via-trini-orchid/40 to-transparent;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, color-mix(in srgb, var(--color-trini-orchid) 40%, transparent), transparent);
   }
   .floral-divider::before,
   .floral-divider::after {
     content: '';
-    @apply absolute top-1/2 h-2 w-2 -translate-y-1/2 rotate-45 bg-trini-orchid/60;
+    position: absolute;
+    top: 50%;
+    height: 8px;
+    width: 8px;
+    transform: translateY(-50%) rotate(45deg);
+    background: color-mix(in srgb, var(--color-trini-orchid) 60%, transparent);
   }
-  .floral-divider::before { @apply left-1/4; }
-  .floral-divider::after { @apply right-1/4; }
+  .floral-divider::before { left: 25%; }
+  .floral-divider::after { right: 25%; }
   .btn-primary {
-    @apply bg-trini-forest text-trini-ivory px-8 py-4 rounded-full font-display text-lg 
-           transition-all duration-300 hover:bg-trini-forest/90 hover:shadow-lg 
-           hover:shadow-trini-forest/20 active:scale-95;
+    background-color: var(--color-trini-forest);
+    color: var(--color-trini-ivory);
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    transition: all 0.3s;
   }
+  .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--color-trini-forest) 90%, black);
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--color-trini-forest) 20%, transparent);
+  }
+  .btn-primary:active { transform: scale(0.95); }
   .btn-gold {
-    @apply bg-trini-gold text-trini-charcoal px-8 py-4 rounded-full font-display text-lg 
-           transition-all duration-300 hover:bg-trini-gold/90 hover:shadow-lg 
-           hover:shadow-trini-gold/20 active:scale-95;
+    background-color: var(--color-trini-gold);
+    color: var(--color-trini-charcoal);
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    transition: all 0.3s;
   }
+  .btn-gold:hover {
+    background-color: color-mix(in srgb, var(--color-trini-gold) 90%, black);
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--color-trini-gold) 20%, transparent);
+  }
+  .btn-gold:active { transform: scale(0.95); }
   .card-premium {
-    @apply bg-white/80 backdrop-blur-sm rounded-2xl border border-trini-sage/30 
-           shadow-sm hover:shadow-xl hover:shadow-trini-forest/5 transition-all duration-500;
+    background-color: color-mix(in srgb, white 80%, transparent);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, var(--color-trini-sage) 30%, transparent);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: all 0.5s;
+  }
+  .card-premium:hover {
+    box-shadow: 0 20px 25px -5px color-mix(in srgb, var(--color-trini-forest) 5%, transparent);
   }
   .text-gradient {
-    @apply bg-gradient-to-r from-trini-forest via-trini-violet to-trini-orchid bg-clip-text text-transparent;
+    background: linear-gradient(to right, var(--color-trini-forest), var(--color-trini-violet), var(--color-trini-orchid));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+}
+
+@keyframes petalFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+@keyframes petalSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(110, 74, 142, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(110, 74, 142, 0.4); }
 }
